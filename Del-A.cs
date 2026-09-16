@@ -43,8 +43,11 @@ while (true)
 
     Console.Clear();
 
+    int total = 0;
     for (int i = 0; i < nameOfItems.Count; i++)
     {   
+        total = total + priceOfItems[i];
         Console.WriteLine($"{i + 1}. {nameOfItems[i]} - {priceOfItems[i]}kr");
     }
+    Console.WriteLine($"Total: {totalt}kr");
 }
