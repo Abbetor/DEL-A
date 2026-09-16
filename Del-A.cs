@@ -3,7 +3,7 @@ List<int> priceOfItems = new List<int>();
 
 while (true)
 {   
-    Console.WriteLine("Type 'D' for delete and 'ADD' to add");
+    Console.WriteLine("Type 'D' for delete and 'ADD' to add (case sensitive)");
     string choice = Console.ReadLine();
     if(choice == "ADD")
     {
@@ -15,11 +15,12 @@ while (true)
 
         if (!int.TryParse(item, out number))
         {   
-            nameOfItems.Add(item);
+            
             string priceOfItem = Console.ReadLine();
 
             if (int.TryParse(priceOfItem, out int newpriceOfItem))
             {
+                nameOfItems.Add(item);
                 priceOfItems.Add(newpriceOfItem);
                 Console.Clear();
                 for (int i = 0; i < nameOfItems.Count; i++)
@@ -29,6 +30,22 @@ while (true)
             }
         }  
     } 
-    
+
+    if(choice == "D")
+    {
+        Console.WriteLine("Type the number in the list that you want to delete.");  
+        string input = Console.ReadLine();
+        if(int.TryParse(input, out int itemNumber))
+        {
+            if(itemNumber >= 1 && itemNumber <= nameOfItems.Count)
+            {
+                int itemPostion = itemNumber -1;
+                nameOfItems.RemoveAt(itemPostion);
+                priceOfItems.RemoveAt(itemPostion);
+
+            
+            }
+        }       
+    }
 }
 
