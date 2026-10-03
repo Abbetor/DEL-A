@@ -16,7 +16,7 @@ while (true)
         
         for(int i = 0; i < nameOfItems.Count; i++)
         {
-            Console.WriteLine($"{i + 1}. {nameOfItems[i]} - {priceOfItems[i]}kr");
+            Console.WriteLine($"{i + 1}. {nameOfItems[i]} - {priceOfItems[i]} kr");
             total = total + priceOfItems[i];
         }
         
@@ -62,9 +62,19 @@ while (true)
                 string PrisInput = Console.ReadLine();
 
                 if(int.TryParse(PrisInput, out int NewPrisInput))
-                {
-                    priceOfItems.Add(NewPrisInput);
-                    nameOfItems.Add(Input);
+                {   
+                    if(NewPrisInput < 0)
+                    {
+                        Console.WriteLine("Du kan inte skriva en negativt tal");
+                        Console.ReadLine();
+                        
+                    }
+                    else
+                    {
+                        priceOfItems.Add(NewPrisInput);
+                        nameOfItems.Add(Input);
+                    }
+                    
                 }
                 else
                 {
