@@ -4,19 +4,18 @@ List<int> priceOfItems = new List<int>();
 while (true)
 {   
     Console.WriteLine("Type 'D' for delete and 'ADD' to add (case sensitive)");
-    string choice = Console.ReadLine();
+    string? choice = Console.ReadLine();
 
     if (choice == "ADD")
     {
         Console.WriteLine("Enter item name (numbers not accepted)");
-        string item = Console.ReadLine();
+        string? item = Console.ReadLine();
 
         int number;
 
         if (!int.TryParse(item, out number))
         {   
-            string priceOfItem = Console.ReadLine();
-
+            string? priceOfItem = Console.ReadLine();
             if (int.TryParse(priceOfItem, out int newpriceOfItem))
             {
                 nameOfItems.Add(item);
@@ -27,18 +26,18 @@ while (true)
 
     if (choice == "D")
     {
-        Console.WriteLine("Type the number in the list that you want to delete.");  
-        string input = Console.ReadLine();
+        Console.WriteLine("Type the number in the list that you want to delete.");
+        string? input = Console.ReadLine();
 
-        if (int.TryParse(input, out int itemNumber))
-        {
-            if (itemNumber >= 1 && itemNumber <= nameOfItems.Count)
-            {
-                int itemPostion = itemNumber - 1;
-                nameOfItems.RemoveAt(itemPostion);
-                priceOfItems.RemoveAt(itemPostion);
-            }
-        }       
+            if (int.TryParse(input, out int itemNumber))
+                    
+                if (itemNumber >= 1 && itemNumber <= nameOfItems.Count)
+                {
+                    int itemPostion = itemNumber - 1;
+                    nameOfItems.RemoveAt(itemPostion);
+                    priceOfItems.RemoveAt(itemPostion);
+                }
+                      
     }
 
     Console.Clear();
@@ -49,5 +48,6 @@ while (true)
         total = total + priceOfItems[i];
         Console.WriteLine($"{i + 1}. {nameOfItems[i]} - {priceOfItems[i]}kr");
     }
-    Console.WriteLine($"Total: {totalt}kr");
+    Console.WriteLine($"Total: {total}kr");
+    Console.WriteLine($"{i}. {nameOfItems} - {priceOfItems}");
 }
