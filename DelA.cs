@@ -23,7 +23,7 @@ while (true)
     }
     Console.WriteLine($"Totalt {total} kr");
     
-    Console.WriteLine("\nSkriv Varan du vill lägga till, därefter skriv priset på den.\n\nSkriv quit för att stänga av programmet");
+    Console.WriteLine("\nSkriv quit för att stänga av programmet\nSkriv Varan du vill lägga till:");
     string Input = Console.ReadLine();
     {
         if (Input == "quit")
@@ -74,7 +74,7 @@ while (true)
                     Console.ReadLine();
                 }
                 
-            }  
+            }
         }
         
     }
