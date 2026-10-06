@@ -3,7 +3,6 @@ List<int> priceOfItems = new List<int>();
 
 while (true)
 { 
-    Console.Clear();
     int total = 0;
     if (nameOfItems.Count == 0)
     {
@@ -26,7 +25,7 @@ while (true)
     Console.WriteLine("\nSkriv quit för att stänga av programmet\nSkriv Varan du vill lägga till:");
     
     string Input = Console.ReadLine();
-    {
+    
         if (Input == "quit")
         {
             break;
@@ -58,7 +57,6 @@ while (true)
         else
         {
             {
-                Console.Clear();
                 Console.WriteLine("Skriv priset på varan");
                 string PrisInput = Console.ReadLine();
 
@@ -90,4 +88,3 @@ while (true)
         
     }
     
-}
