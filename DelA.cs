@@ -21,9 +21,10 @@ while (true)
         }
         
     }
-    Console.WriteLine($"Totalt {total} kr");
-    
+    Console.WriteLine($"Totalt {total} kr\n");
+    Console.WriteLine("Om du vill ta bort en produkt, tryck då på nummret i listan som du vill ta bort");
     Console.WriteLine("\nSkriv quit för att stänga av programmet\nSkriv Varan du vill lägga till:");
+    
     string Input = Console.ReadLine();
     {
         if (Input == "quit")
