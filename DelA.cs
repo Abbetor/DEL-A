@@ -56,7 +56,7 @@ while (true)
         }
         else
         {
-            {
+            
                 Console.WriteLine("Skriv priset på varan");
                 string PrisInput = Console.ReadLine();
 
@@ -83,7 +83,6 @@ while (true)
                     Console.ReadLine();
                 }
                 
-            }
         }
         
     }
